@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#10131f">
+<title>Семья и рост — идеи для будущего</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+:root{--ink:#f7f8ff;--muted:#aab1c8;--bg:#0d1020;--panel:#151a2d;--line:rgba(255,255,255,.1);--lime:#c7f36b;--violet:#a69aff;--cyan:#75e2df}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Manrope,Inter,Arial,sans-serif;line-height:1.65}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(rgba(255,255,255,.22) .7px,transparent .7px);background-size:17px 17px;mask-image:linear-gradient(to bottom,black,transparent 75%)}
+a{color:inherit;text-decoration:none}.wrap{width:min(1160px,91%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(13,16,32,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+nav{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;gap:11px;align-items:center;font-weight:800;letter-spacing:-.5px}
+.mark{width:38px;height:38px;border-radius:13px;background:var(--lime);color:#141827;display:grid;place-items:center;font-size:20px;font-weight:900}
+.brand em{font-style:normal;color:var(--lime)}.links{display:flex;gap:25px;color:var(--muted);font-size:13px;font-weight:700}.links a:hover{color:var(--lime)}
+.hero{padding:94px 0 70px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;width:500px;height:500px;right:-80px;top:-30px;border-radius:50%;background:radial-gradient(circle,rgba(166,154,255,.23),transparent 68%);pointer-events:none}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);border-radius:100px;padding:8px 13px;color:#d7dbec;font-size:12px;font-weight:800;letter-spacing:.5px;text-transform:uppercase}
+.dot{width:7px;height:7px;background:var(--lime);border-radius:50%;box-shadow:0 0 15px var(--lime)}
+h1{font-size:clamp(52px,9vw,108px);line-height:.98;letter-spacing:-.075em;margin:25px 0 23px;max-width:900px}
+h1 .glow{color:var(--lime)}.hero-copy{max-width:670px;font-size:18px;color:var(--muted)}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{padding:13px 18px;border-radius:13px;font-size:13px;font-weight:800;display:inline-flex;align-items:center;gap:12px;transition:.2s}
+.primary{background:var(--lime);color:#131728}.secondary{border:1px solid var(--line);background:rgba(255,255,255,.03)}.btn:hover{transform:translateY(-3px)}
+.hero-stats{display:flex;gap:12px;flex-wrap:wrap;margin-top:55px}.stat{border:1px solid var(--line);background:rgba(255,255,255,.035);border-radius:15px;padding:15px 19px;min-width:145px}.stat strong{display:block;font-size:24px;letter-spacing:-1px}.stat span{color:var(--muted);font-size:11px;font-weight:700}
+section{padding:78px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:28px}.kicker{color:var(--lime);font-size:11px;letter-spacing:2px;font-weight:900;text-transform:uppercase}
+h2{font-size:clamp(30px,5vw,52px);letter-spacing:-.06em;line-height:1.08;margin:10px 0 0}.sub{max-width:520px;color:var(--muted);font-size:14px}
+.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}.panel{border:1px solid var(--line);background:linear-gradient(145deg,rgba(255,255,255,.065),rgba(255,255,255,.02));border-radius:23px;padding:27px}
+.panel p{color:var(--muted);font-size:14px}.bigquote{font-size:clamp(22px,3vw,34px);font-weight:700;line-height:1.3;letter-spacing:-1px}.bigquote span{color:var(--lime)}
+.profile{display:flex;gap:16px;align-items:center;margin-top:25px;padding-top:22px;border-top:1px solid var(--line)}.avatar{width:54px;height:54px;border-radius:18px;background:linear-gradient(135deg,var(--violet),var(--cyan));display:grid;place-items:center;color:#111629;font-size:20px;font-weight:900}.profile strong{display:block}.profile small{color:var(--muted)}
+.pill{display:inline-block;border:1px solid var(--line);border-radius:100px;padding:6px 10px;color:var(--muted);font-size:11px;font-weight:800;margin:4px 4px 0 0}
+.ideas{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}
+.idea{display:flex;gap:17px;padding:22px;border:1px solid var(--line);border-radius:19px;background:var(--panel);transition:.25s;min-height:145px}
+.idea:hover{transform:translateY(-4px);border-color:rgba(199,243,107,.45);background:#1a2035}
+.idea-num{flex-shrink:0;width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:rgba(199,243,107,.12);color:var(--lime);font-weight:900;font-size:13px}
+.idea h3{font-size:16px;margin:0 0 7px;letter-spacing:-.3px}.idea p{font-size:12px;color:var(--muted);margin:0}
+.roadmap{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.phase{padding:22px;border-radius:19px;border:1px solid var(--line);background:var(--panel)}.phase .date{font-size:11px;font-weight:900;color:var(--cyan)}.phase h3{margin:12px 0 7px}.phase p{color:var(--muted);font-size:13px;margin:0}
+.budget-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:18px}.budget-total{background:var(--lime);color:#141827;border-radius:24px;padding:30px;display:flex;flex-direction:column;justify-content:space-between;min-height:290px}.budget-total .number{font-size:clamp(50px,7vw,78px);font-weight:900;letter-spacing:-.08em;line-height:1}.budget-total p{font-size:13px;max-width:260px}
+.bars{border:1px solid var(--line);border-radius:24px;padding:25px;background:var(--panel)}.barrow{margin:0 0 18px}.barlabel{display:flex;justify-content:space-between;gap:12px;font-size:12px;margin-bottom:8px}.barlabel span:last-child{font-weight:800}.track{height:7px;background:rgba(255,255,255,.08);border-radius:20px;overflow:hidden}.fill{height:100%;border-radius:20px;background:linear-gradient(90deg,var(--violet),var(--cyan))}
+.results{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.result{border-top:2px solid var(--lime);padding:20px 0}.result h3{font-size:18px;margin:0 0 8px}.result p{font-size:13px;color:var(--muted);margin:0}
+.closing{border:1px solid var(--line);border-radius:28px;padding:clamp(28px,6vw,60px);background:radial-gradient(circle at 90% 10%,rgba(166,154,255,.2),transparent 35%),linear-gradient(120deg,#171c32,#111528)}
+.closing h2{max-width:760px}.closing p{max-width:650px;color:var(--muted)}
+footer{padding:28px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+@media(max-width:800px){.links{display:none}.hero{padding-top:68px}.about-grid,.budget-grid{grid-template-columns:1fr}.roadmap,.results{grid-template-columns:1fr}.section-head{display:block}.ideas{grid-template-columns:1fr}.hero-stats{margin-top:35px}.stat{flex:1}.hero-copy{font-size:16px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+</style>
+</head>
+<body>
+<header><nav class="wrap">
+<a class="brand" href="#"><span class="mark">↗</span><span>СЕМЬЯ <em>И</em> РОСТ</span></a>
+<div class="links"><a href="#about">О проекте</a><a href="#ideas">10 идей</a><a href="#roadmap">Этапы</a><a href="#budget">Бюджет</a></div>
+</nav></header>
+<main>
+<section class="hero"><div class="wrap">
+<div class="eyebrow"><span class="dot"></span> Учебный проект · ВЭПИ · 2026—2027</div>
+<h1>Семья.<br>Возможности.<br><span class="glow">Рост.</span></h1>
+<p class="hero-copy">«Семья и рост» — учебная модель экономической стратегии с 10 идеями для семейной экономики, занятости, малого бизнеса и более понятных экономических решений.</p>
+<div class="actions"><a class="btn primary" href="#ideas">Исследовать 10 идей <span>↘</span></a><a class="btn secondary" href="#about">О проекте <span>＋</span></a></div>
+<div class="hero-stats"><div class="stat"><strong>10</strong><span>ПРАКТИЧЕСКИХ ИДЕЙ</span></div><div class="stat"><strong>2027–30</strong><span>ГОРИЗОНТ СТРАТЕГИИ</span></div><div class="stat"><strong>5 000 ₽</strong><span>УЧЕБНЫЙ БЮДЖЕТ</span></div></div>
+</div></section>
+<section id="about"><div class="wrap">
+<div class="section-head"><div><div class="kicker">01 / Идея проекта</div><h2>Экономика,<br>понятная людям.</h2></div><p class="sub">Проект соединяет анализ экономических вопросов с предложениями, которые можно обсуждать, оценивать и дорабатывать.</p></div>
+<div class="about-grid">
+<div class="panel"><div class="bigquote">Наша цель — превратить экономический анализ в <span>понятные идеи</span> и измеримые результаты.</div><p>Задачи проекта: изучить официальную статистику, выделить ключевые проблемы, рассмотреть существующие инструменты поддержки, разработать предложения и определить показатели их оценки.</p><span class="pill">Анализ</span><span class="pill">Показатели эффективности</span><span class="pill">Планирование</span><span class="pill">Бюджет</span></div>
+<div class="panel"><div class="kicker">Автор проекта</div><div class="profile"><div class="avatar">МВ</div><div><strong>Варламова Милана Руслановна</strong><small>2 курс · группа Э-254-1304-бу</small></div></div><p>ВЭПИ · Направление «Экономика»<br>Профиль «Бухгалтерский учёт»</p><div class="profile"><div class="avatar">КЭ</div><div><strong>Кузьминова Екатерина Александровна</strong><small>Наставник проекта</small></div></div></div>
+</div></div></section>
+<section id="ideas"><div class="wrap">
+<div class="section-head"><div><div class="kicker">02 / Предложения</div><h2>10 идей.<br>Один вектор — рост.</h2></div><p class="sub">Каждая идея — отдельное направление учебной модели. Это предложения для анализа, а не описание уже действующей государственной программы.</p></div>
+<div class="ideas">
+<article class="idea"><div class="idea-num">01</div><div><h3>Единое цифровое окно мер поддержки</h3><p>Понятная навигация по доступным мерам поддержки в одном месте.</p></div></article>
+<article class="idea"><div class="idea-num">02</div><div><h3>Семейный налоговый навигатор</h3><p>Помощь в ориентировании в налоговых возможностях и правилах.</p></div></article>
+<article class="idea"><div class="idea-num">03</div><div><h3>«Возвращение в занятость»</h3><p>Идеи для поддержки возвращения к работе и экономической активности.</p></div></article>
+<article class="idea"><div class="idea-num">04</div><div><h3>Производительность для МСП</h3><p>Подходы к повышению эффективности малого и среднего бизнеса.</p></div></article>
+<article class="idea"><div class="idea-num">05</div><div><h3>Инвестиционный ваучер</h3><p>Учебная идея инструмента для начинающих предприятий.</p></div></article>
+<article class="idea"><div class="idea-num">06</div><div><h3>Региональные центры экономической навигации</h3><p>Понятная информационная поддержка граждан и предпринимателей.</p></div></article>
+<article class="idea"><div class="idea-num">07</div><div><h3>Предсказуемость регулирования</h3><p>Более понятные и предсказуемые экономические правила.</p></div></article>
+<article class="idea"><div class="idea-num">08</div><div><h3>Оценка регулирующего воздействия</h3><p>Анализ возможных последствий регулирующих решений.</p></div></article>
+<article class="idea"><div class="idea-num">09</div><div><h3>Поддержка технологического обновления</h3><p>Обновление технологий и повышение эффективности предприятий.</p></div></article>
+<article class="idea"><div class="idea-num">10</div><div><h3>Экономическая грамотность</h3><p>Более доступное объяснение экономических решений и инструментов.</p></div></article>
+</div></div></section>
+<section id="roadmap"><div class="wrap">
+<div class="section-head"><div><div class="kicker">03 / Как устроена работа</div><h2>От исследования<br>к результату.</h2></div><p class="sub">Календарный план учебного проекта — от сбора информации до итоговой защиты.</p></div>
+<div class="roadmap">
+<div class="phase"><div class="date">02.10—15.10.2026</div><h3>01. Исследование</h3><p>Официальная статистика и анализ существующих инструментов поддержки.</p></div>
+<div class="phase"><div class="date">16.10—31.10.2026</div><h3>02. Проектирование</h3><p>Разработка направлений стратегии и 10 конкретных идей.</p></div>
+<div class="phase"><div class="date">01.11—20.11.2026</div><h3>03. Проверка</h3><p>Проверка предложений и показателей эффективности.</p></div>
+<div class="phase"><div class="date">21.11—10.12.2026</div><h3>04. Обсуждение</h3><p>Обратная связь и обсуждение результатов.</p></div>
+<div class="phase"><div class="date">11.12—30.12.2026</div><h3>05. Доработка</h3><p>Уточнение материалов и улучшение итогового продукта.</p></div>
+<div class="phase"><div class="date">10.01—30.01.2027</div><h3>06. Финал</h3><p>Подготовка комплекта материалов и защита проекта.</p></div>
+</div></div></section>
+<section id="budget"><div class="wrap">
+<div class="section-head"><div><div class="kicker">04 / Ресурсы</div><h2>Бюджет без<br>лишних сложностей.</h2></div><p class="sub">Предварительная учебная оценка расходов на подготовку и представление проекта.</p></div>
+<div class="budget-grid"><div class="budget-total"><div><div class="kicker" style="color:#24330d">ОБЩАЯ СУММА</div><div class="number">5 000 ₽</div></div><p>Ориентировочная структура расходов учебного проекта.</p></div>
+<div class="bars">
+<div class="barrow"><div class="barlabel"><span>Печать материалов</span><span>1 500 ₽</span></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+<div class="barrow"><div class="barlabel"><span>Канцелярия и презентация</span><span>500 ₽</span></div><div class="track"><div class="fill" style="width:33.33%"></div></div></div>
+<div class="barrow"><div class="barlabel"><span>Опрос / мероприятие</span><span>1 000 ₽</span></div><div class="track"><div class="fill" style="width:66.67%"></div></div></div>
+<div class="barrow"><div class="barlabel"><span>Информационный дизайн</span><span>1 000 ₽</span></div><div class="track"><div class="fill" style="width:66.67%"></div></div></div>
+<div class="barrow" style="margin-bottom:0"><div class="barlabel"><span>Резерв</span><span>1 000 ₽</span></div><div class="track"><div class="fill" style="width:66.67%"></div></div></div>
+</div></div></div></section>
+<section><div class="wrap">
+<div class="section-head"><div><div class="kicker">05 / Что даёт проект</div><h2>Результат — это<br>не только файл.</h2></div></div>
+<div class="results"><div class="result"><h3>Экономические навыки</h3><p>Работа с официальными источниками, анализ показателей, бюджетирование и оценка эффективности.</p></div><div class="result"><h3>Понятная информация</h3><p>Структурирование предложений для семей, работников и предпринимателей.</p></div><div class="result"><h3>Личное развитие</h3><p>Самостоятельность, ответственность, планирование и умение представлять результаты.</p></div></div>
+</div></section>
+<section><div class="wrap"><div class="closing"><div class="kicker">Семья и рост · ВЭПИ</div><h2>Сильная экономика начинается с понятных решений.</h2><p>Проект показывает, как экономический анализ можно превратить в предложения, определить показатели оценки и представить результат в доступной форме.</p><a class="btn primary" href="#ideas">Вернуться к 10 идеям ↑</a></div></div></section>
+</main>
+<footer><div class="wrap foot"><span>© 2026–2027 · Учебный проект «Семья и рост»</span><span>Варламова Милана Руслановна · ВЭПИ</span></div></footer>
+</body></html>
